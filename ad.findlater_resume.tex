@@ -1,0 +1,162 @@
+%-------------------------
+% Alex Findlater's Resume (software engineering)
+% Author : Alex Findlater
+%------------------------
+%
+%
+\author{Alexander Findlater}
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{mailto:findlater@protonmail.com}{\Large Alexander D. Findlater}} & Email : \href{mailto:findlater@protonmail.com}{findlater@protonmail.com}\\
+  \href{https://github.com/findlater}{https://github.com/findlater} & Mobile : +1-810-429-8538 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Iowa State University, Graduate School}{Ames, IA}
+      {Doctorate in Chemical Physics;  GPA:3.75}{Aug. 2011 -- Summer 2018}
+    \resumeSubheading
+      {University of Michigan -- Flint, Undergraduate}{Flint, MI}
+      {Bachelor of Science in Chemistry; Minor in Mathematics;  GPA: 3.66} {Aug. 2007 -- July. 2010}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Iowa State University/Ames Laboratory}{Ames, IA}
+      {Research Assistant -- Theoretical/Computational Chemistry and Computer Science}{July 2013 - Present}
+      \resumeItemListStart
+        \resumeItem{Open-source/community code development}
+        {\href{http://www.msg.ameslab.gov/gamess/index.html}{GAMESS} is a popular open-source molecular modeling software package, maintained and developed by the Gordon Research Group at Iowa State University.  GAMESS source code is written primarily in FORTRAN 90 and C++, and makes extensive use of MPI, OpenMP, cuBLAS and IPS.}        
+        \resumeItem{Massively-parallel, linear-scaling method development}
+        {Developed and implemented the FMO-CIM algorithm into GAMESS.  Massively-parallel algorithms capable of scaling to Leadership Computing Facility (LCF) production queues (up to 49,152 nodes) are essential for accurately modeling large molecular systems.  This work was published in the \href{https://pubs.acs.org/doi/abs/10.1021/jp509266g}{\textit{Journal of Physical Chemistry A.}}}
+      \resumeItem{Performance engineering \& code optimization}
+        {Working with DOE and Intel engineers, VTune \& Intel Parallel Studio were used to identify GAMESS performance bottlenecks on the next-generation LCF Xeon Phi super-computing architecture.  Bottlenecks were alleviated by a combination of distributed parallelism (MPI), threading (OpenMP) and vectorization (AVX512).}
+      \resumeItem{Nonlinear optics}
+      {Performed quantum mechanical computational modeling of a variety of Bipyridyl Platinum(II) Bisstilbenylacetylide complexes to screen for molecular motifs with large two-photon absorption cross-sections.  Work was in collaboration with colleagues at Wright Paterson AFB and North Dakota University.  This work was published in the high-impact journal \href{https://www.researchgate.net/publication/277335755_Ultra-fast_electron_capture_by_electrosterically-stabilized_gold_nanoparticles}{\textit{Nanoscale}}.}
+      \resumeItem{Argonne National Laboratory LCF INCITE Grant}
+      {Participated in drafting the \href{https://www.alcf.anl.gov/files/alcf-sciencebrochure-2016.pdf}{''State of Art Simulations of Liquid Phenomena''} 2016 LCF INCITE grant application (PI: Mark S. Gordon) resulting in an awarded LCF supercomputer allocation of 200 million core hours.}
+      \resumeItem{Chemistry recitation lecturer \& laboratory instructor}
+      {Prepared and executed lesson plans for Freshmen-level general chemistry laboratories and recitation classes.}
+        \resumeItemListEnd
+
+%%\section{Experience}
+%%  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Argonne National Laboratory -- Leadership Computing Facility}{Lemont, IL}
+      {Research Assistant Internship -- Computational Chemistry/Computer Science}{July 2013 - Sept. 2013}
+      \resumeItemListStart
+        \resumeItem{GAMESS integral library support}
+      {Developed a general interface between GAMESS and two-electron integral libraries,  specifically the ERD electron-repulsion integral library of Flocke and Lotrich.}              
+        \resumeItem{Optimizing GAMESS for the Blue Gene/Q architecture}
+        {Performed source-code optimization targeting the BG/Q architecture with a focus on reducing the run-time memory footprint of the GAMESS binary.  Extensive work was done to map compiler options from standard FORTRAN 90 compilers (GNU, Intel, etc.) onto the compiler options of the custom IBM XL FORTRAN compilers.  }
+      \resumeItemListEnd
+        
+    \resumeSubheading
+      {University of Michigan -- Flint}{Flint, MI}
+      {Research Assistant and Chemistry Laboratory Instructor}{Aug. 2010 - May 2012}
+      \resumeItemListStart
+      \resumeItem{QSAR study of terpenoid insect repellents}
+      {QSAR and mathematical modeling of the interactions between low-toxicity terpenoid mosquito repellents and lactic acid.  This work was published in \href{https://www.sciencedirect.com/science/article/pii/S0960894X13000371}{\textit{Bioorganic \& Medicinal Chemistry Letters}}.}
+        \resumeItem{Chemistry laboratory teaching assistant}
+          {Organic, Analytic and Physical Chemistry laboratory instructor and assistant.}
+      \resumeItemListEnd
+
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Training}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Argonne Training Program on Extreme-Scale Computing 2016}
+      {Intensive, two-week training on the key skills, approaches, and tools to design, implement, and execute computational science and engineering applications on current high-end computing systems and the leadership-class computing systems of the future.}
+\resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: C/C++, FORTRAN 77/90, Python, Java}
+     \hfill
+     \textbf{Technologies}{: GNU/Linux, EMACS, LaTeX, ToS}
+   }
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
